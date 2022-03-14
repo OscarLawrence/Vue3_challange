@@ -1,13 +1,23 @@
 <template>
   <div class="page_b">
     <form>
-      <input placeholder="Width" type="text" v-model="form_data.width" />
+      <label>Width</label>
+      <input
+        placeholder="Width"
+        type="text"
+        id="width"
+        v-model="form_data.width"
+      />
+      <label>Height</label>
+
       <input placeholder="Height" type="text" v-model="form_data.height" />
+      <label>Bachground Color</label>
       <input
         placeholder="Background Color"
         type="text"
         v-model="form_data.background"
       />
+      <label>Border Radius</label>
       <input
         placeholder="Border Radius"
         type="text"
