@@ -24,11 +24,5 @@ export default createStore({
     toggle_images: (state: Store_StateI) => {
       state.show_images = !state.show_images;
     },
-    update_form_data: (
-      state: Store_StateI,
-      data: Store_StateI["form_data"]
-    ) => {
-      state.form_data = { ...state.form_data, ...data };
-    },
   },
 });
