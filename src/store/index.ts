@@ -1,14 +1,34 @@
-import { createStore } from 'vuex'
+import { createStore } from "vuex";
+
+interface Store_StateI {
+  show_images: boolean;
+  form_data: {
+    width: string;
+    height: string;
+    background: string;
+    border_radius: string;
+  };
+}
 
 export default createStore({
   state: {
-  },
-  getters: {
+    show_images: true,
+    form_data: {
+      width: "50px",
+      height: "50px",
+      background: "blue",
+      border_radius: "10px",
+    },
   },
   mutations: {
+    toggle_images: (state: Store_StateI) => {
+      state.show_images = !state.show_images;
+    },
+    update_form_data: (
+      state: Store_StateI,
+      data: Store_StateI["form_data"]
+    ) => {
+      state.form_data = { ...state.form_data, ...data };
+    },
   },
-  actions: {
-  },
-  modules: {
-  }
-})
+});
